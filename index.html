@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOGOSCO Class of '98 Oldboys Association</title>
     <style>
-        /* Global Styles */
+         /* Global Styles */
         :root {
             --primary-color: #8e2c1b;
             --secondary-color: #440303f8;
@@ -78,6 +78,52 @@
             background: var(--accent-color);
         }
         
+        /* Password Protection Styles */
+        .password-protected {
+            display: none;
+        }
+        
+        .password-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        .password-form h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .password-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .password-form button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .password-form button:hover {
+            background: var(--secondary-color);
+        }
+        
+        .password-error {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
         /* Header Styles */
         header {
             background-color: var(--secondary-color);
@@ -722,7 +768,7 @@
                         <img src="images/ogara.jpg" alt="Executive Member">
                     </div>
                     <div class="member-info">
-                        <h3>Barr. Ogara Preciuos. N </h3>
+                        <h3>Barr. Precious Isaac Nnanyereugo Ogara </h3>
                         <p>Legal Adviser</p>
                     </div>
                 </div>
@@ -731,7 +777,7 @@
                         <img src="images/emeana.jpg" alt="Executive Member">
                     </div>
                     <div class="member-info">
-                        <h3>Dr. Emeana John</h3>
+                        <h3>Dr. Emeana John. C</h3>
                         <p>Ex. Officio</p>
                     </div>
                 </div>
@@ -844,7 +890,19 @@
             <h2 class="section-title">Financial Records</h2>
             <div class="financial-content">
                 <p>We maintain transparent financial records for all members to view. Our financial activities are regularly updated and available for review.</p>
-                <a href="https://docs.google.com/spreadsheets/d/1jqMRAqvG5rbHVz7s3VfTV5Oqqp5QalFY/edit#gid=1314523111" class="btn" target="_blank">View Financial Records</a>
+                
+                <!-- Password Form -->
+                <div id="passwordForm" class="password-form">
+                    <h3>Enter Password to Access Financial Records</h3>
+                    <input type="password" id="financialPassword" placeholder="Enter password">
+                    <button onclick="checkFinancialPassword()">Submit</button>
+                    <p id="passwordError" class="password-error">Incorrect password. Please try again.</p>
+                </div>
+                
+                <!-- Protected Content (hidden by default) -->
+                <div id="protectedFinancialContent" class="password-protected">
+                    <a href="https://docs.google.com/spreadsheets/d/1jqMRAqvG5rbHVz7s3VfTV5Oqqp5QalFY/edit#gid=1314523111" class="btn" target="_blank">View Financial Records</a>
+                </div>
             </div>
         </div>
     </section>
@@ -927,6 +985,32 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        
+        // Financial Password Protection
+        function checkFinancialPassword() {
+            const password = document.getElementById('financialPassword').value;
+            const errorElement = document.getElementById('passwordError');
+            const protectedContent = document.getElementById('protectedFinancialContent');
+            const passwordForm = document.getElementById('passwordForm');
+            
+            // Set your password here (for demo purposes only - not secure for production)
+            const correctPassword = "HOGOSCO98"; // Change this to your desired password
+            
+            if (password === correctPassword) {
+                protectedContent.style.display = "block";
+                passwordForm.style.display = "none";
+                errorElement.style.display = "none";
+            } else {
+                errorElement.style.display = "block";
+            }
+        }
+        
+        // Allow pressing Enter to submit password
+        document.getElementById('financialPassword').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                checkFinancialPassword();
+            }
         });
     </script>
 </body>
