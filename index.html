@@ -343,6 +343,95 @@
             font-weight: 500;
         }
         
+        /* Board of Trustees Section */
+        .trustees {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .trustees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .trustees .executive-member {
+            background: #fff;
+        }
+
+        .trustees .member-image {
+            height: 260px;
+            background: #e9e4e2;
+        }
+
+        /* News Media Section */
+        .news-media {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .news-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 10px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .news-card {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            background: var(--light-color);
+            border-left: 5px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 22px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            color: var(--dark-color);
+        }
+
+        .news-card:hover {
+            transform: translateY(-6px);
+            border-left-color: var(--accent-color);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .news-icon {
+            flex: 0 0 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .news-text h3 {
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            margin-bottom: 2px;
+        }
+
+        .news-text p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .news-text span {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
         /* Gallery Section */
         .gallery {
             padding: 80px 0;
@@ -733,8 +822,10 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#aims">Aims</a></li>
                     <li><a href="#executive">Executive</a></li>
+                    <li><a href="#trustees">Trustees</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#publications">Publications</a></li>
+                    <li><a href="#news">News</a></li>
                     <li><a href="#financial">Financial</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -839,7 +930,7 @@
                         <img src="images/nayo.jpg" alt="Executive Member">
                     </div>
                     <div class="member-info">
-                        <h3>Umunnakwe Emmanuel, Nayo</h3>
+                        <h3>Umunnakwe Emmanuel. A</h3>
                         <p>Public Relations Officer</p>
                         <p>Class of 1998</p>
                     </div>
@@ -922,6 +1013,69 @@
                 </div>
                
                 
+            </div>
+        </div>
+    </section>
+
+    <!-- Board of Trustees Section -->
+    <section id="trustees" class="trustees">
+        <div class="container">
+            <h2 class="section-title">Board of Trustees</h2>
+            <div class="trustees-grid">
+                <div class="executive-member">
+                    <div class="member-image">
+                        <img src="images/emeana.jpg" alt="Board of Trustees Member 1" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 260%22><rect width=%22200%22 height=%22260%22 fill=%22%23e9e4e2%22/><circle cx=%22100%22 cy=%2299%22 r=%2240%22 fill=%22%23b9aeab%22/><path d=%22M25 260c0-58 33-90 75-90s75 32 75 90z%22 fill=%22%23b9aeab%22/></svg>'">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Emeana John. C</h3>
+                        <p>Member</p>
+                    </div>
+                </div>
+                <div class="executive-member">
+                    <div class="member-image">
+                        <img src="images/nayo.jpg" alt="Board of Trustees Member 2" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 260%22><rect width=%22200%22 height=%22260%22 fill=%22%23e9e4e2%22/><circle cx=%22100%22 cy=%2299%22 r=%2240%22 fill=%22%23b9aeab%22/><path d=%22M25 260c0-58 33-90 75-90s75 32 75 90z%22 fill=%22%23b9aeab%22/></svg>'">
+                    </div>
+                    <div class="member-info">
+                        <h3>Umunnakwe Emmanuel. A</h3>
+                        <p>Member</p>
+                    </div>
+                </div>
+                <div class="executive-member">
+                    <div class="member-image">
+                        <img src="images/ogara.jpg" alt="Board of Trustees Member 3" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 260%22><rect width=%22200%22 height=%22260%22 fill=%22%23e9e4e2%22/><circle cx=%22100%22 cy=%2299%22 r=%2240%22 fill=%22%23b9aeab%2２/><path d=%２２M２5 ２60c０-５８ ３３-９０ ７５-９０s７５ ３２ ７５ ９０z%２２ fill=%２２%２３b９aeab%２２/></svg>'">
+                    </div>
+                    <div class="member-info">
+                        <h3>Barr. Precious Isaac Nnanyereugo Ogara</h3>
+                        <p>Member</p>
+                    </div>
+                </div>
+                <div class="executive-member">
+                    <div class="member-image">
+                        <img src="images/omede.jpg" alt="Board of Trustees Member 4" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 260%22><rect width=%22200%22 height=%22260%22 fill=%22%23e9e4e2%22/><circle cx=%22100%22 cy=%2299%22 r=%2240%22 fill=%22%23b9aeab%2２/><path d=%２２M２5 ２60c０-５８ ３３-９０ ７５-９０s７５ ３２ ７５ ９０z%２２ fill=%２２%２３b９aeab%２２/></svg>'">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Apeh Omede</h3>
+                        <p>Member</p>
+                    </div>
+                </div>
+                <div class="executive-member">
+                    <div class="member-image">
+                        <img src="images/Esinaulo.jpg" alt="Board of Trustees Member 5" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 260%22><rect width=%22200%22 height=%22260%22 fill=%22%23e9e4e2%22/><circle cx=%22100%22 cy=%2299%22 r=%2240%22 fill=%22%23b9aeab%22/><path d=%22M25 260c0-58 33-90 75-90s75 32 75 90z%22 fill=%22%23b9aeab%22/></svg>'">
+                    </div>
+                    <div class="member-info">
+                        <h3>Engr. Ugochukwu Esinaulo</h3>
+                        <p>Member</p>
+                    </div>
+                </div>
+                <div class="executive-member">
+                    <div class="member-image">
+                        <img src="images/igwe.jpg" alt="Board of Trustees Member 6" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 260%22><rect width=%22200%22 height=%22260%22 fill=%22%23e9e4e2%22/><circle cx=%22100%22 cy=%2299%22 r=%2２40%２ fill=%２２%２３b９aeab%２２/></svg>'">
+                    </div>
+                    <div class="member-info">
+                        <h3>Barr. Ugochukwu. C Igwe</h3>
+                        <p>Member</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1109,15 +1263,80 @@
                         <a href="#" target="_blank">Download PDF</a>
                     </div>
                 </div>
-                <div class="publication-item">
-                    <div class="publication-icon">
-                        <i class="fas fa-newspaper"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Media Section -->
+    <section id="news" class="news-media">
+        <div class="container">
+            <h2 class="section-title">News &amp; Media</h2>
+            <p class="news-intro">Stay informed with the latest national and international news from leading media outlets.</p>
+            <div class="news-grid">
+                <a href="https://punchng.com/" class="news-card" target="_blank" rel="noopener noreferrer">
+                    <div class="news-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="news-text">
+                        <h3>Punch</h3>
+                        <p>Nigeria</p>
+                        <span>Visit site <i class="fas fa-external-link-alt"></i></span>
                     </div>
-                    <div class="publication-info">
-                        <h3>Newsletter </h3>
-                        <a href="#" target="_blank">Read Online</a>
+                </a>
+                <a href="https://www.vanguardngr.com/" class="news-card" target="_blank" rel="noopener noreferrer">
+                    <div class="news-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="news-text">
+                        <h3>Vanguard</h3>
+                        <p>Nigeria</p>
+                        <span>Visit site <i class="fas fa-external-link-alt"></i></span>
                     </div>
-                </div>
+                </a>
+                <a href="https://guardian.ng/" class="news-card" target="_blank" rel="noopener noreferrer">
+                    <div class="news-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="news-text">
+                        <h3>The Guardian Nigeria</h3>
+                        <p>Nigeria</p>
+                        <span>Visit site <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a href="https://www.premiumtimesng.com/" class="news-card" target="_blank" rel="noopener noreferrer">
+                    <div class="news-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="news-text">
+                        <h3>Premium Times</h3>
+                        <p>Nigeria</p>
+                        <span>Visit site <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a href="https://www.imotrumpeta.com//" class="news-card" target="_blank" rel="noopener noreferrer">
+                    <div class="news-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="news-text">
+                        <h3>Imo Trumpeta</h3>
+                        <p>Nigeria</p>
+                        <span>Visit site <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a href="https://nigeriahornnews.com//" class="news-card" target="_blank" rel="noopener noreferrer">
+                    <div class="news-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="news-text">
+                        <h3>Nigeria HORN</h3>
+                        <p>Nigeria</p>
+                        <span>Visit site <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a href="https://www.channelstv.com/" class="news-card" target="_blank" rel="noopener noreferrer">
+                    <div class="news-icon"><i class="fas fa-tv"></i></div>
+                    <div class="news-text">
+                        <h3>Channels TV</h3>
+                        <p>Nigeria</p>
+                        <span>Visit site <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a href="https://www.arise.tv/live-tv/" class="news-card" target="_blank" rel="noopener noreferrer">
+                    <div class="news-icon"><i class="fas fa-tv"></i></div>
+                    <div class="news-text">
+                        <h3>Arise TV</h3>
+                        <p>Nigeria</p>
+                        <span>Visit site <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
